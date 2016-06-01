@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PinochleDeck
 {
-    class Deck
+    public class Deck
     {
         public string face;
         public string suit;
@@ -19,14 +19,53 @@ namespace PinochleDeck
         public int deckIndex;
         public int[] sameCardIndex = new int[4] {1,2,3,4};
 
-        public List<Card> listCards = new List<Card>();
+        private bool empty;
+
+        private List<Card> allCards;
 
         public Deck()
         {
-            this.Cards = new List<Card>();
+            this.allCards = new List<Card>();
         }
 
-        public int Count { get; set; }
+        public int Count
+        {
+            get
+            {
+                return allCards.Count;
+            }
+        }
+        public Card this[int index]
+        {
+            get
+            {
+                return allCards[index];
+            }
+        }
+
+        public int this[Card card]
+        {
+            get
+            {
+                return allCards.FindIndex(c => 
+                c.Value == card.Value && 
+                c.Suit == card.Suit && 
+                c.SameCardIndex == card.SameCardIndex);
+            }
+        }
+
+        public bool Empty
+        {
+            get
+            {
+                if (Count <= 0)
+                {
+                    return true;
+                }
+                else
+                    return false;              
+            }
+        }
 
         public List<Card> Cards { get; set; }
 
@@ -63,12 +102,12 @@ namespace PinochleDeck
                     for (int k = 0; k < suits.Count(); k++)
                     {
                         Card newCard = new Card(suits[k], faces[i], sameCardIndex[x]);
-                        listCards.Add(newCard);
+                        allCards.Add(newCard);
                     }
                 }
             }
 
-            return listCards;
+            return allCards;
         }
 
 

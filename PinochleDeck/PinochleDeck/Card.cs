@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PinochleDeck
 {
-    class Card
+    public class Card
     {
         public Card()
         {

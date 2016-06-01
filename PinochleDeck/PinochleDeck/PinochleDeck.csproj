@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Card.cs" />
     <Compile Include="Deck.cs" />
+    <Compile Include="PinochleBoard.cs" />
+    <Compile Include="PinochleDealer.cs" />
+    <Compile Include="PinochleHand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

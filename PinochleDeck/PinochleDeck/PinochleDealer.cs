@@ -9,6 +9,7 @@ namespace PinochleDeck
     public class PinochleDealer
     {
         private Deck deck;
+        private int[] dealToEachAmount = new int[4] { 2, 3, 4, 5 }; //how many cards are dealt out each circulation to each player.
         public PinochleDealer()
         {
             deck = new Deck();

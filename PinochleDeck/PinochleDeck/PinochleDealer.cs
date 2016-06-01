@@ -24,7 +24,8 @@ namespace PinochleDeck
             deck.FillListCards();
             while(!deck.Empty)
             {
-                deck[rand.Next(0, deck.Count)];
+                var i = rand.Next(0, deck.Count);
+                var card = deck[deck[i]];
             }
             
 

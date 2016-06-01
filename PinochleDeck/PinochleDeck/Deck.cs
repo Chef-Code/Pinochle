@@ -60,10 +60,11 @@ namespace PinochleDeck
             {
                 if (Count <= 0)
                 {
-                    return true;
+                    empty = true;
+                    return empty;
                 }
                 else
-                    return false;              
+                    return empty;              
             }
         }
 

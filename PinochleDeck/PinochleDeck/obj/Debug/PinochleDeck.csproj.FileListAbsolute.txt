@@ -1,0 +1,6 @@
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.exe.config
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.exe
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.pdb
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\obj\Debug\PinochleDeck.csprojResolveAssemblyReference.cache
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\obj\Debug\PinochleDeck.exe
+D:\Visual_Studio\Personal\PinochleDeck\PinochleDeck\obj\Debug\PinochleDeck.pdb

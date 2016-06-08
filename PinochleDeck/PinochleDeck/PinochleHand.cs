@@ -29,7 +29,7 @@ namespace PinochleDeck
             set;
         }
 
-        public Card this[int index]
+        public Card this[int index]  //POST int, GET Card
         {
             get
             {
@@ -37,7 +37,7 @@ namespace PinochleDeck
             }
         }
 
-        public int this[Card card]
+        public int this[Card card] //POST Card, GET int
         {
             get
             {
@@ -46,6 +46,59 @@ namespace PinochleDeck
                 c.Suit == card.Suit &&
                 c.SameCardIndex == card.SameCardIndex);
             }
+        }
+
+        public bool this[Card card] //POST Card, GET bool  TODO: use reflection to pass in any method avilable to the card to check for the card type.
+        {
+            get
+            {
+                foreach(var crd in hand)
+                {
+                    hand.Any(c =>
+                        c.Value == card.Value &&
+                        c.Suit == card.Suit &&
+                        c.SameCardIndex == card.SameCardIndex);
+                }
+            }
+        }
+        public bool HasTen()
+        {
+            if (this.hand.Any(c => c.IsTen()))
+                return true;
+            else
+                return false;
+        }
+
+        public bool HasJack()
+        {
+            if (this.hand.Any(c => c.IsJack()))
+                return true;
+            else
+                return false;
+        }
+
+        public bool HasQueen()
+        {
+            if (this.hand.Any(c => c.IsQueen()))
+                return true;
+            else
+                return false;
+        }
+
+        public bool HasKing()
+        {
+            if (this.hand.Any(c => c.IsKing()))
+                return true;
+            else
+                return false;
+        }
+
+        public bool HasAce()
+        {
+            if (this.hand.Any(c => c.IsAce()))
+                return true;
+            else
+                return false;
         }
         public bool IsRun()
         {
@@ -62,8 +115,12 @@ namespace PinochleDeck
             return false;
         }
 
-        public bool IsPinochle()
+        public bool IsPinochle(PinochleHand ph)
         {
+            foreach(var card in ph.hand)
+            {
+                this[card.IsJack()]
+            }
             return false;
         }
 
@@ -86,5 +143,6 @@ namespace PinochleDeck
         {
             return false;
         }
+
     }
 }

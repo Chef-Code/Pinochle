@@ -58,9 +58,40 @@ namespace PinochleDeck
                 return false;
         }
 
+        public bool SameIndex(Card a, Card b)
+        {
+            if (a.SameCardIndex == b.SameCardIndex)
+                return true;
+            else
+                return false;
+        }
+
+        public bool SameCard(Card a, Card b)
+        {
+            if (SameSuitAndValue(a,b) && SameIndex(a,b))
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsJack()
+        {
+            if (this.Value == "jack")
+                return true;
+            else
+                return false;
+        }
         public bool IsJack(Card a)
         {
             if (a.Value == "jack")
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsQueen()
+        {
+            if (this.Value == "queen")
                 return true;
             else
                 return false;
@@ -74,9 +105,25 @@ namespace PinochleDeck
                 return false;
         }
 
+        public bool IsKing()
+        {
+            if (this.Value == "king")
+                return true;
+            else
+                return false;
+        }
+
         public bool IsKing(Card a)
         {
             if (a.Value == "king")
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsTen()
+        {
+            if (this.Value == "ten")
                 return true;
             else
                 return false;
@@ -90,6 +137,14 @@ namespace PinochleDeck
                 return false;
         }
 
+        public bool IsAce()
+        {
+            if (this.Value == "ace")
+                return true;
+            else
+                return false;
+        }
+
         public bool IsAce(Card a)
         {
             if (a.Value == "ace")
@@ -98,9 +153,24 @@ namespace PinochleDeck
                 return false;
         }
 
+        public bool IsClubs()
+        {
+            if (this.Suit == "clubs")
+                return true;
+            else
+                return false;
+        }
         public bool IsClubs(Card a)
         {
             if (a.Suit == "clubs")
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsDiamonds()
+        {
+            if (this.Suit == "diamonds")
                 return true;
             else
                 return false;
@@ -114,9 +184,25 @@ namespace PinochleDeck
                 return false;
         }
 
+        public bool IsHearts()
+        {
+            if (this.Suit == "hearts")
+                return true;
+            else
+                return false;
+        }
+
         public bool IsHearts(Card a)
         {
             if (a.Suit == "hearts")
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsSpades()
+        {
+            if (this.Suit == "spades")
                 return true;
             else
                 return false;
@@ -129,6 +215,5 @@ namespace PinochleDeck
             else
                 return false;
         }
-
     }
 }

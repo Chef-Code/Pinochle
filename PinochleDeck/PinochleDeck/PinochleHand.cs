@@ -86,6 +86,5 @@ namespace PinochleDeck
         {
             return false;
         }
-
     }
 }

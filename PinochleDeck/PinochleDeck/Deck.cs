@@ -58,13 +58,12 @@ namespace PinochleDeck
         {
             get
             {
-                if (Count <= 0)
+                if (Count != 0)
                 {
-                    empty = true;
                     return empty;
                 }
                 else
-                    return empty;              
+                    return !empty;              
             }
         }
 

@@ -10,7 +10,23 @@ namespace PinochleDeck
     {
         static void Main(string[] args)
         {
+            Deck deck = new Deck();
+            TestEmpty(deck);
 
+        }
+
+        static public void TestEmpty(Deck d)
+        {
+           
+            bool empty = d.Empty;
+            int count = d.Count;
+            Console.WriteLine(empty.ToString() + " " + count.ToString());
+            Console.ReadLine();
+
+        }
+
+        static public void FunwithStrings()
+        {
             Deck d1 = new Deck();
             Deck d2 = new Deck();
 
@@ -28,7 +44,7 @@ namespace PinochleDeck
             int index2 = 0;
 
             foreach (var _d1 in deck1)
-            {             
+            {
                 build1 = string.Format("Deck1: card from method: FillStringArrayCards {0} ", _d1);
                 message1.SetValue(build1, index1);
                 index1++;
@@ -41,7 +57,7 @@ namespace PinochleDeck
                 index2++;
             }
 
-            for(var i = 0; i < message1.Count();i++)
+            for (var i = 0; i < message1.Count(); i++)
             {
                 var m1 = message1[i];
                 var m2 = message2[i];
@@ -50,7 +66,7 @@ namespace PinochleDeck
 
                 Console.WriteLine(full);
             }
-           
+
             Console.ReadLine();
         }
     }

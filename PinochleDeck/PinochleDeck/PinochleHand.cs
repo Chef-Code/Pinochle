@@ -48,7 +48,7 @@ namespace PinochleDeck
             }
         }
 
-        public bool this[Card card] //POST Card, GET bool  TODO: use reflection to pass in any method avilable to the card to check for the card type.
+       /* public bool this[Card card] //POST Card, GET bool  TODO: use reflection to pass in any method avilable to the card to check for the card type.
         {
             get
             {
@@ -60,7 +60,7 @@ namespace PinochleDeck
                         c.SameCardIndex == card.SameCardIndex);
                 }
             }
-        }
+        }*/
         public bool HasTen()
         {
             if (this.hand.Any(c => c.IsTen()))
@@ -119,7 +119,7 @@ namespace PinochleDeck
         {
             foreach(var card in ph.hand)
             {
-                this[card.IsJack()]
+                //this[card.IsJack()];
             }
             return false;
         }

@@ -35,40 +35,40 @@ namespace PinochleDeck
                 return 0;
         }
 
-        public bool SameSuit(Card a, Card b)
+        public bool SameSuit( Card b)
         {
-            if (a.Suit == b.Suit)
+            if (this.Suit == b.Suit)
                 return true;
             else
                 return false;
         }
-        public bool SameValue(Card a, Card b)
+        public bool SameValue( Card b)
         {
-            if (a.Value == b.Value)
-                return true;
-            else
-                return false;
-        }
-
-        public bool SameSuitAndValue(Card a, Card b)
-        {
-            if (SameSuit(a, b) && SameValue(a, b))
+            if (this.Value == b.Value)
                 return true;
             else
                 return false;
         }
 
-        public bool SameIndex(Card a, Card b)
+        public bool SameSuitAndValue( Card b)
         {
-            if (a.SameCardIndex == b.SameCardIndex)
+            if (SameSuit(b) && SameValue(b))
                 return true;
             else
                 return false;
         }
 
-        public bool SameCard(Card a, Card b)
+        public bool SameIndex( Card b)
         {
-            if (SameSuitAndValue(a,b) && SameIndex(a,b))
+            if (this.SameCardIndex == b.SameCardIndex)
+                return true;
+            else
+                return false;
+        }
+
+        public bool SameCard(Card b)
+        {
+            if (SameSuitAndValue(b) && SameIndex(b))
                 return true;
             else
                 return false;

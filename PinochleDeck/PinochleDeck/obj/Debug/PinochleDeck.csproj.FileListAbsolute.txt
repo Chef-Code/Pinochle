@@ -11,3 +11,5 @@ C:\Users\Owner\Documents\GitHub\Pinochle\PinochleDeck\PinochleDeck\obj\Debug\Pin
 C:\Users\Student.CIT130PRIS\Desktop\Pinochle-master\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.exe.config
 C:\Users\Student.CIT130PRIS\Desktop\Pinochle-master\PinochleDeck\PinochleDeck\obj\Debug\PinochleDeck.exe
 C:\Users\Student.CIT130PRIS\Desktop\Pinochle-master\PinochleDeck\PinochleDeck\obj\Debug\PinochleDeck.pdb
+C:\Users\Owner\Documents\GitHub\Pinochle\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.exe
+C:\Users\Owner\Documents\GitHub\Pinochle\PinochleDeck\PinochleDeck\bin\Debug\PinochleDeck.pdb

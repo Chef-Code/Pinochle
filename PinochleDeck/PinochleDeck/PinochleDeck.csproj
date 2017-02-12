@@ -45,15 +45,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="Clubs.cs" />
     <Compile Include="Deck.cs" />
+    <Compile Include="Diamonds.cs" />
+    <Compile Include="Hearts.cs" />
+    <Compile Include="ListExtensions.cs" />
+    <Compile Include="IMeld.cs" />
+    <Compile Include="Meld.cs" />
+    <Compile Include="MeldCombination.cs" />
+    <Compile Include="MeldType.cs" />
     <Compile Include="PinochleBoard.cs" />
     <Compile Include="PinochleDealer.cs" />
     <Compile Include="PinochleHand.cs" />
+    <Compile Include="PinochlePlayer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScoringTable.cs" />
+    <Compile Include="Spades.cs" />
+    <Compile Include="Suit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="READ_ME.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

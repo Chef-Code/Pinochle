@@ -12,34 +12,44 @@ namespace PinochleDeck
         public string suit;
         public string indexedCard;
 
-        public string[] suits = new string[4] { "clubs", "diamonds", "hearts", "spades" };
-        public string[] faces = new string[5] { "jack", "queen", "king", "ten", "ace" };
+        List<Suit> suits = new List<Suit>()
+        {
+            new Clubs(),
+            new Diamonds(),
+            new Hearts(),
+            new Spades() 
+        };
+        string[] faces = new string[5] { "jack", "queen", "king", "ten", "ace" };
+        int[] sameCardIndex = new int[4] {1,2,3,4};
+
         public string[] indexedCards = new string[80];
 
         public int deckIndex;
-        public int[] sameCardIndex = new int[4] {1,2,3,4};
 
-        private bool empty;
-
-        private List<Card> allCards;
+        private List<Card> cards = new List<Card>();
 
         public Deck()
         {
-            this.allCards = new List<Card>();
+            Cards = FillListCards();
+        }
+        public List<Card> Cards
+        {
+            get {return cards; }
+            set {cards = value; }
         }
 
         public int Count
         {
             get
             {
-                return allCards.Count;
+                return cards.Count;
             }
         }
         public Card this[int index]
         {
             get
             {
-                return allCards[index];
+                return cards[index];
             }
         }
 
@@ -47,7 +57,7 @@ namespace PinochleDeck
         {
             get
             {
-                return allCards.FindIndex(c => 
+                return cards.FindIndex(c => 
                               c.Value == card.Value && 
                               c.Suit == card.Suit && 
                               c.SameCardIndex == card.SameCardIndex);
@@ -60,16 +70,14 @@ namespace PinochleDeck
             {
                 if (Count != 0)
                 {
-                    return empty;
+                    return false;
                 }
                 else
-                    return !empty;              
+                    return true;              
             }
         }
 
-        public List<Card> Cards { get; set; }
-
-        public string[] FillStringArrayCards()
+        private string[] FillStringArrayCards()
         {
             deckIndex = 0;
 
@@ -93,21 +101,21 @@ namespace PinochleDeck
             return indexedCards;
         }
 
-        public List<Card> FillListCards()
+        private List<Card> FillListCards()
         {
-            for (int x = 0; x <= 3; x++)
+            var deckCards = new List<Card>();
+            for (int x = 0; x < sameCardIndex.Length; x++)
             {
-                for (int i = 0; i < faces.Count(); i++)
+                for (int i = 0; i < faces.Length; i++)
                 {
-                    for (int k = 0; k < suits.Count(); k++)
+                    for (int k = 0; k < suits.Count; k++)
                     {
                         Card newCard = new Card(suits[k], faces[i], sameCardIndex[x]);
-                        allCards.Add(newCard);
+                        deckCards.Add(newCard);                      
                     }
                 }
             }
-
-            return allCards;
+            return deckCards;
         }
 
 

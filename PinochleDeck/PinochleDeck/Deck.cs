@@ -48,9 +48,9 @@ namespace PinochleDeck
             get
             {
                 return allCards.FindIndex(c => 
-                c.Value == card.Value && 
-                c.Suit == card.Suit && 
-                c.SameCardIndex == card.SameCardIndex);
+                              c.Value == card.Value && 
+                              c.Suit == card.Suit && 
+                              c.SameCardIndex == card.SameCardIndex);
             }
         }
 
